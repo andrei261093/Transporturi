@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Devices;
+use App\Notification;
+use App\reservation;
+use Illuminate\Http\Request;
+
+class ReservationsController extends Controller
+{
+
+    public function getReservationView(){
+        return view('clients.createReservation');
+    }
+
+    public function postReservationView(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|min:4',
+            'telephone' => 'required|min:10',
+            'location' => 'required|min:4'
+        ]);
+
+        $reservation = new Reservation([
+            'name' => $request->input('name'),
+            'location' => $request->input('location'),
+            'telephone' => $request->input('telephone')
+        ]);
+
+        $reservation->save();
+
+        $notification_body = 'Rezervare loc nou pentru ' . $reservation->name . ' din ' . $reservation->location;
+
+        Notification::sendNotification(Devices::all() , 'Rezervare noua!' , $notification_body);
+
+         return view('clients.home');
+    }
+
+    public function getReservationJSON($parameter){
+        if($parameter == "andrei"){
+            $reservations = \App\Reservation::orderBy('created_at', 'desc')->take(20)->get();
+            return $reservations;
+        }else{
+            return null;
+        }
+    }
+    
+    public function postHasBeenCalled(Request $request){
+
+        $data = $request->all();
+        $reservation = \App\Reservation::find($data['id']);
+        $reservation->hasBeenCalled = '1';
+        $reservation->save();
+        return response(200);
+    }
+
+
+
+}
