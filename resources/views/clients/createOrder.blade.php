@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <h1><center>Cheama masina!</center></h1>
+    <div>
+        <div class="col-sm-6">
+            <h1><center>Cheama masina la domiciliu!</center></h1>
             @if(count($errors) > 0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $error)
@@ -35,12 +35,16 @@
                     <input class="form-control" type="text" id="city"name="city"/>
                 </div>
                 <div class="form-group">
-                    <label for="address">Adresa</label>
+                    <label for="address">Strada si numarul</label>
                     <input class="form-control" type="text" id="address"name="address"/>
                 </div>
                 <div class="form-group">
                     <label for="weight">Grautate estimata (kg)</label>
                     <input class="form-control" type="number"  min="100" max="1000" step="10" value="100" id="weight"name="weight"/>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Adresa destinatie</label>
+                    <textarea class="form-control" type="text" rows="5" id="destination" name="destination">  </textarea>
                 </div>
                 <div class="form-group">
                     <label for="telephone" style="width:350px;">Numar de telefon</label>
@@ -51,6 +55,40 @@
                 {{ csrf_field() }}
             </form>
         </div>
+
+        <div class="col-sm-6">
+            <div class="responsive">
+                <h2>Principalele orase vizitate</h2>
+                <p>Colectam si livram pachete in orice oras de pe ruta Bucuresti - Madrid si imprejurimi (max  20km distanta fata de orasele listate mai jos si greutate de peste 200kg). Pentru
+                    pachete sau obiecte de dimesiune si greutate mai mare, le colectam si le livram la domiciliu.
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item" style="height: 30px; padding: 5px 15px;"><strong>Romania</strong></li>
+                    <li class="list-group-item" style="height: 30px; padding: 5px 15px;"><small>București</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Alexandria</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Roșiorii de vede</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Pitești</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Caracal</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Craiova</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Filiași</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Tr Severin</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Orșova</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Lugoj</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Timișoara</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Arad</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><strong>Spania</strong></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Girona</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Lleida</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Zaragoza</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Albacete</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Valencia</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Barcelona</small></li>
+                    <li class="list-group-item"style="height: 30px; padding: 5px 15px;"><small>Madrid</small></li>
+
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 @endsection

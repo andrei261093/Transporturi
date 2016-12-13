@@ -39,8 +39,8 @@ class OrderController extends Controller
 
         $notification_body = 'Comanda noua pentru ' . $order->name . ' cu plecare din ' .$order->location;
 
-        Notification::sendNotification(Devices::all() , 'Rezervare noua!' , $notification_body);
+        Notification::sendNotification(Devices::all() , 'Comanda noua!' , $notification_body);
 
-        return view('clients.home');
+        return view('clients.succesOrderView');
     }
 }

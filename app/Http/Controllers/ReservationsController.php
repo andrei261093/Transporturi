@@ -36,7 +36,7 @@ class ReservationsController extends Controller
 
         Notification::sendNotification(Devices::all() , 'Rezervare noua!' , $notification_body);
 
-         return view('clients.home');
+         return view('clients.succesReservationView');
     }
 
     public function getReservationJSON($parameter){
