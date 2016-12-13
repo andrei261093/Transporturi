@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <link href="{{ asset('css/transporturi.css') }}" rel="stylesheet"  >
-    
+
     @yield('styles')
 </head>
 <body>
@@ -21,11 +21,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 @yield('scripts')
 
-<footer style="">
-    <center>Transporturi Romania-Spania, Spania-Romania</center>
-    <center>Telefon: 0761 620 504</center>
 
-</footer>
 
 </body>
 

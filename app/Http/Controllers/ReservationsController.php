@@ -18,19 +18,21 @@ class ReservationsController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|min:4',
-            'telephone' => 'required|min:10',
-            'location' => 'required|min:4'
+            'telephone' => 'required|regex:/[0-9]/|min:10',
+            'location' => 'required|min:4',
+            'destination' => 'required|min:4'
         ]);
 
         $reservation = new Reservation([
             'name' => $request->input('name'),
             'location' => $request->input('location'),
-            'telephone' => $request->input('telephone')
+            'telephone' => $request->input('telephone'),
+            'destination' => $request->input('destination')
         ]);
 
         $reservation->save();
 
-        $notification_body = 'Rezervare loc nou pentru ' . $reservation->name . ' din ' . $reservation->location;
+        $notification_body = 'Rezervare loc nou pentru ' . $reservation->name . ' cu plecare din ' .$reservation->location . ' si destinatia '.$reservation->destination;
 
         Notification::sendNotification(Devices::all() , 'Rezervare noua!' , $notification_body);
 
@@ -47,7 +49,6 @@ class ReservationsController extends Controller
     }
     
     public function postHasBeenCalled(Request $request){
-
         $data = $request->all();
         $reservation = \App\Reservation::find($data['id']);
         $reservation->hasBeenCalled = '1';

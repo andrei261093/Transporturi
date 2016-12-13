@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('title')
-    Transporturi Spania-Romania
+    Transporturi Romania-Spania
 @endsection
 
 @section('content')
@@ -9,8 +9,8 @@
 
 
         <div id="portfolio" class="container-fluid text-center">
-            <h1>Transporturi Romania-Spania si Spania-Romania</h1><br>
-            <h4>Ce oferim?</h4>
+            <h1>Transporturi Romania-Spania si retur</h1><br>
+            <h2>Ce oferim?</h2>
             <div class="row text-center slideanim ">
                 <div class="col-sm-6">
                     <div class="thumbnail ">
@@ -23,7 +23,7 @@
                     <div class="thumbnail">
                         <img src="https://www.arenait.net/files/2016/11/colete-curierat.jpg" alt="New York" width="400" height="300">
                         <p><strong>Transport colete riticate si livrate la domiciliu</strong><br>(greutate mai mare de 200kg)</p>
-                        <a href="{{ route('reservation.reservationForm') }}" class="btn  btn-default" role="button">Cheama masina!</a>
+                        <a href="{{ route('order.orderForm') }}" class="btn  btn-default" role="button">Cheama masina!</a>
                     </div>
                 </div>
 

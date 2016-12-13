@@ -61,7 +61,12 @@ body:before {
     -o-background-size: cover;
     background-size: cover;
 }
-.thumbnail{background-color:transparent}
+.thumbnail{
+    background-color:transparent;
+    border:0;
+    box-shadow:0;
+    border-radius:0;
+}
 
 .navbar {
     opacity: 0.95;

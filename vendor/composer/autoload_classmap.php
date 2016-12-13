@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddDestinationColumnToReservations' => $baseDir . '/database/migrations/2016_12_13_115716_add_destination_column_to_reservations.php',
     'CreateDevicesTable' => $baseDir . '/database/migrations/2016_12_07_152241_create_devices_table.php',
+    'CreateOrdersTable' => $baseDir . '/database/migrations/2016_12_13_122723_create_orders_table.php',
     'CreateReservationsTable' => $baseDir . '/database/migrations/2016_12_04_194359_create_reservations_table.php',
     'CreateUsersTokenTable' => $baseDir . '/database/migrations/2016_12_06_194246_create_users_token_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label for="telephone" style="width:350px;">Numar de telefon</label>
-                    <input class="form-control" type="text" id="telephone"name="telephone"/>
+                    <input class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" type="tel" id="telephone"name="telephone"/>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Rezerva!</button>

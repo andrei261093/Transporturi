@@ -20,9 +20,19 @@ Route::get('/rezervare', [
     'as' => 'reservation.reservationForm'
 ]);
 
+Route::get('/comanda', [
+    'uses' => 'OrderController@getOrderView',
+    'as' => 'order.orderForm'
+]);
+
 Route::post('/rezervare', [
     'uses' => 'ReservationsController@postReservationView',
     'as' => 'reservation.reservationForm'
+]);
+
+Route::post('/comanda', [
+    'uses' => 'OrderController@postOrderView',
+    'as' => 'order.orderForm'
 ]);
 
 Route::get('/reservations/{parameter}', ['uses' =>'ReservationsController@getReservationJSON']);
