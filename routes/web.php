@@ -52,6 +52,43 @@ Route::post('/test', function () {
     }
 });
 
+Route::get('/signin', [
+    'uses' => 'UserController@getSignin',
+    'as' => 'user.signin'
+]);
+Route::post('/signin', [
+    'uses' => 'UserController@postSignin',
+    'as' => 'user.signin'
+]);
+
+Route::get('/signup', [
+    'uses' => 'UserController@getSignup',
+    'as' => 'user.signup'
+]);
+
+Route::post('/signup', [
+    'uses' => 'UserController@postSignup',
+    'as' => 'user.signup'
+]);
+
+Route::get('/logout', [
+    'uses' => 'UserController@getLogout',
+    'as' => 'user.logout'
+]);
+
+Route::get('/reservations', [
+    'uses' => 'ReservationsController@getReservationsAdmin',
+    'as' => 'admin.reservations',
+    'middleware' => 'auth'
+]);
+
+Route::get('/delete/{id}', [
+    'uses' => 'ReservationsController@getReservationDelete',
+    'as' => 'admin.deleteReservations',
+    'middleware' => 'auth'
+]);
+
+
 
 
 

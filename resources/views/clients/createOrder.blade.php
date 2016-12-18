@@ -51,7 +51,7 @@
                     <input class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" type="tel" id="telephone"name="telephone"/>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Rezerva!</button>
+                <button type="submit" class="btn btn-primary">Finalizeaza</button>
                 {{ csrf_field() }}
             </form>
         </div>

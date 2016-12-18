@@ -279,9 +279,11 @@ class ComposerStaticInit356188241b8c554af95965313450a3f2
 
     public static $classMap = array (
         'AddDestinationColumnToReservations' => __DIR__ . '/../..' . '/database/migrations/2016_12_13_115716_add_destination_column_to_reservations.php',
+        'AddForaingKeyContrainToUsers' => __DIR__ . '/../..' . '/database/migrations/2016_12_15_141750_add_foraing_key_contrain_toUsers.php',
         'CreateDevicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_07_152241_create_devices_table.php',
         'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_13_122723_create_orders_table.php',
         'CreateReservationsTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_04_194359_create_reservations_table.php',
+        'CreateUserTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_15_133659_create_user_table.php',
         'CreateUsersTokenTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_06_194246_create_users_token_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

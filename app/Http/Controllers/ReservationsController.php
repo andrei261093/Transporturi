@@ -6,6 +6,7 @@ use App\Devices;
 use App\Notification;
 use App\reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReservationsController extends Controller
 {
@@ -54,6 +55,19 @@ class ReservationsController extends Controller
         $reservation->hasBeenCalled = '1';
         $reservation->save();
         return response(200);
+    }
+
+    public function getReservationsAdmin(){
+        $reservations = DB::table('reservations')->orderBy('created_at', 'cresc')->paginate(15);
+
+        return view('adminPages.reservations', ['reservations' => $reservations]);
+    }
+
+    public function getReservationDelete($id)
+    {
+        $reservation = \App\Reservation::find($id);
+        $reservation->delete();
+        return redirect()->back();
     }
 
 

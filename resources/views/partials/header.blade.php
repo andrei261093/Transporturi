@@ -22,16 +22,34 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Admin
+                       aria-expanded="false">
+                        @if(Auth::user())
+                            {{Auth::user()->firstName}} {{Auth::user()->lastName}}
+                        @endif
+                        @if(!Auth::user())
+                            <i class="fa fa-user" aria-hidden="true"></i> Admin
+                        @endif
                         <span class="caret"></span></a>
 
 
-                    <ul class="dropdown-menu">
-                        <li><a href="">Login</a></li>
-                        <li><a href="">Sign up</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
+                    @if(Auth::user())
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('admin.reservations') }}">Rezervari</a></li>
+                            <li><a href="#">Comenzi</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">Sign up</a></li>
+                            <li><a href="{{route('user.logout')}}">Logout</a></li>
+                        </ul>
+                    @endif
+                    @if(!Auth::user())
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('user.signin') }}">Login</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    @endif
+
+
 
 
                 </li>
