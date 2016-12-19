@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddDestinationColumnToReservations' => $baseDir . '/database/migrations/2016_12_13_115716_add_destination_column_to_reservations.php',
     'AddForaingKeyContrainToUsers' => $baseDir . '/database/migrations/2016_12_15_141750_add_foraing_key_contrain_toUsers.php',
+    'AddObservationsColumnToReservations' => $baseDir . '/database/migrations/2016_12_19_131744_add_observations_column_to_reservations.php',
     'CreateDevicesTable' => $baseDir . '/database/migrations/2016_12_07_152241_create_devices_table.php',
     'CreateOrdersTable' => $baseDir . '/database/migrations/2016_12_13_122723_create_orders_table.php',
     'CreateReservationsTable' => $baseDir . '/database/migrations/2016_12_04_194359_create_reservations_table.php',

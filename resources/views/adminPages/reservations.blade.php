@@ -9,14 +9,12 @@
             </p>
             <ul class="list-group">
                 @foreach ($reservations as $reservation)
-
-
                     <div class="list-group">
                         <li class="list-group-item">
                             <strong>{{ $reservation->name }}</strong>
                             <spam class="pull-right">{{$reservation->created_at}}</spam>
                         </li>
-                        <a href="#" class="list-group-item clearfix">
+                        <a href="{{route('admin.reservationDetails', $reservation->id)}}" class="list-group-item clearfix">
                             <span class="glyphicon glyphicon-pencil"></span>
                             Pleaca din <strong>{{$reservation->location}}</strong> si merge in <strong>{{$reservation->destination}}</strong> .
                              <span class="pull-right">

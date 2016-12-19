@@ -88,6 +88,18 @@ Route::get('/delete/{id}', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/reservation/{id}', [
+    'uses' => 'ReservationsController@getReservationDetails',
+    'as' => 'admin.reservationDetails',
+    'middleware' => 'auth'
+]);
+
+Route::put('/reservation/{id}', [
+    'uses' => 'ReservationsController@updateReservation',
+    'as' => 'admin.reservationUpdate',
+    'middleware' => 'auth'
+]);
+
 
 
 

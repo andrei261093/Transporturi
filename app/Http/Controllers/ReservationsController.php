@@ -70,6 +70,20 @@ class ReservationsController extends Controller
         return redirect()->back();
     }
 
+    public function getReservationDetails($id)
+    {
+        $reservation = \App\Reservation::find($id);
+
+        return view('adminPages.reservationView', ['reservation' => $reservation]);
+    }
+
+    public function updateReservation(Request $request, $id){
+        $reservation = \App\Reservation::find($id);
+        $reservation->observations = $request->observations;
+        $reservation->save();
+        return view('adminPages.reservationView', ['reservation' => $reservation]);
+    }
+
 
 
 }
