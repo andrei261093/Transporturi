@@ -4,7 +4,7 @@
 
     <div class="col-lg-12">
         <div class="responsive">
-            <a href="{{ route('admin.reservations') }}" class="btn  btn-warning pull-right" role="button">Inapoi la rezervari</a>
+            <a href="{{ route('admin.reservations') }}" class="btn  btn-warning pull-right" role="button">Inapoi </a>
             <h2>Detalii rezervare pentru <strong> {{ $reservation->name }}</strong></h2>
 
             <p>

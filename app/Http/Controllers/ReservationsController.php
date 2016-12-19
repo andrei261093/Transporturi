@@ -81,7 +81,8 @@ class ReservationsController extends Controller
         $reservation = \App\Reservation::find($id);
         $reservation->observations = $request->observations;
         $reservation->save();
-        return view('adminPages.reservationView', ['reservation' => $reservation]);
+      //  return view('adminPages.reservationView', ['reservation' => $reservation]);
+        return redirect()->route('admin.reservations');
     }
 
 

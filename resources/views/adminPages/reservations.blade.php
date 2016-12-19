@@ -5,21 +5,24 @@
         <div class="responsive">
             <h2>Rezervari:</h2>
             <p>
-                Detealii rezervari:
+                Detalii rezervari:
             </p>
             <ul class="list-group">
                 @foreach ($reservations as $reservation)
                     <div class="list-group">
-                        <li class="list-group-item">
-                            <strong>{{ $reservation->name }}</strong>
-                            <spam class="pull-right">{{$reservation->created_at}}</spam>
-                        </li>
+
                         <a href="{{route('admin.reservationDetails', $reservation->id)}}" class="list-group-item clearfix">
                             <span class="glyphicon glyphicon-pencil"></span>
-                            Pleaca din <strong>{{$reservation->location}}</strong> si merge in <strong>{{$reservation->destination}}</strong> .
+                            <strong>{{ $reservation->name }}</strong>
+                            <spam class="pull-right">{{$reservation->created_at}}</spam>
+
+                            </span>
+                        </a>
+                        <li class="list-group-item clearfix">
+                                Pleaca din <strong>{{$reservation->location}}</strong> si merge in <strong>{{$reservation->destination}}</strong> .
                              <span class="pull-right">
                                  @if($reservation->hasBeenCalled===1)
-                                      <span>A fost sunt:<font color="green"><strong >DA</strong></font> </span>
+                                     <span>A fost sunt:<font color="green"><strong >DA</strong></font> </span>
                                  @else
                                      <span>A fost sunt: <font color="red"><strong >NU</strong></font> </span>
                                  @endif
@@ -27,7 +30,8 @@
                                      <span class="glyphicon glyphicon-trash">Sterge</span>
                                  </button>
                             </span>
-                        </a>
+
+                        </li>
                     </div>
 
                 @endforeach
