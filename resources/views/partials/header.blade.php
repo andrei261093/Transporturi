@@ -35,7 +35,7 @@
                     @if(Auth::user())
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('admin.reservations') }}">Rezervari</a></li>
-                            <li><a href="#">Comenzi</a></li>
+                            <li><a href="{{ route('admin.orders') }}">Comenzi</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="">Sign up</a></li>
                             <li><a href="{{route('user.logout')}}">Logout</a></li>

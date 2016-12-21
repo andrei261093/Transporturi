@@ -12,6 +12,7 @@
                     <div class="list-group">
 
                         <a href="{{route('admin.reservationDetails', $reservation->id)}}" class="list-group-item clearfix">
+                             #{{$reservation->id}} 
                             <span class="glyphicon glyphicon-pencil"></span>
                             <strong>{{ $reservation->name }}</strong>
                             <spam class="pull-right">{{$reservation->created_at}}</spam>

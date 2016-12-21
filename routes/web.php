@@ -82,7 +82,7 @@ Route::get('/reservations', [
     'middleware' => 'auth'
 ]);
 
-Route::get('/delete/{id}', [
+Route::get('/delete/reservation{id}', [
     'uses' => 'ReservationsController@getReservationDelete',
     'as' => 'admin.deleteReservations',
     'middleware' => 'auth'
@@ -100,7 +100,29 @@ Route::put('/reservation/{id}', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/orders', [
+    'uses' => 'OrderController@getOrdersAdmin',
+    'as' => 'admin.orders',
+    'middleware' => 'auth'
+]);
 
+Route::get('/order/{id}', [
+    'uses' => 'OrderController@getOrderDetails',
+    'as' => 'admin.orderDetails',
+    'middleware' => 'auth'
+]);
+
+Route::get('/delete/order/{id}', [
+    'uses' => 'OrderController@getOrderDelete',
+    'as' => 'admin.deleteOrder',
+    'middleware' => 'auth'
+]);
+
+Route::put('/order/{id}', [
+    'uses' => 'OrderController@updateOrder',
+    'as' => 'admin.orderUpdate',
+    'middleware' => 'auth'
+]);
 
 
 

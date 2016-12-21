@@ -281,6 +281,7 @@ class ComposerStaticInit356188241b8c554af95965313450a3f2
         'AddDestinationColumnToReservations' => __DIR__ . '/../..' . '/database/migrations/2016_12_13_115716_add_destination_column_to_reservations.php',
         'AddForaingKeyContrainToUsers' => __DIR__ . '/../..' . '/database/migrations/2016_12_15_141750_add_foraing_key_contrain_toUsers.php',
         'AddObservationsColumnToReservations' => __DIR__ . '/../..' . '/database/migrations/2016_12_19_131744_add_observations_column_to_reservations.php',
+        'ChangeOrderTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_21_132245_change_order_table.php',
         'CreateDevicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_07_152241_create_devices_table.php',
         'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_13_122723_create_orders_table.php',
         'CreateReservationsTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_04_194359_create_reservations_table.php',

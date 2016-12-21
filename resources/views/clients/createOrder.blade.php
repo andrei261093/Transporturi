@@ -23,34 +23,26 @@
                     <input class="form-control" type="text" id="name"name="name"/>
                 </div>
                 <div class="form-group">
-                    <label for="country">Tara</label>
-                    <input class="form-control" type="text" id="country"name="country"/>
+                    <label for="pickUpLocation">Adresa completa de ridicare</label>
+                    <input class="form-control" type="text" id="pickUpLocation" name="pickUpLocation"/>
                 </div>
                 <div class="form-group">
-                    <label for="county">Judet/Regiune</label>
-                    <input class="form-control" type="text" id="county"name="county"/>
-                </div>
-                <div class="form-group">
-                    <label for="city">Oras</label>
-                    <input class="form-control" type="text" id="city"name="city"/>
-                </div>
-                <div class="form-group">
-                    <label for="address">Strada si numarul</label>
-                    <input class="form-control" type="text" id="address"name="address"/>
+                    <label for="deliveryLocation">Adresa completa de livrare</label>
+                    <input class="form-control" type="text" id="deliveryLocation"name="deliveryLocation"/>
                 </div>
                 <div class="form-group">
                     <label for="weight">Grautate estimata (kg)</label>
                     <input class="form-control" type="number"  min="100" max="1000" step="10" value="100" id="weight"name="weight"/>
                 </div>
                 <div class="form-group">
-                    <label for="destination">Adresa destinatie</label>
-                    <textarea class="form-control" type="text" rows="5" id="destination" name="destination">  </textarea>
-                </div>
-                <div class="form-group">
                     <label for="telephone" style="width:350px;">Numar de telefon</label>
                     <input class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" type="tel" id="telephone"name="telephone"/>
                 </div>
 
+                <div class="form-group">
+                    <label for="clientObservations">Observatii</label>
+                    <textarea class="form-control" type="text" rows="5" id="clientObservations" name="clientObservations">  </textarea>
+                </div>
                 <button type="submit" class="btn btn-primary">Finalizeaza</button>
                 {{ csrf_field() }}
             </form>
