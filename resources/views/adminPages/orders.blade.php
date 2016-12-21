@@ -3,12 +3,12 @@
 @section('content')
  
 
-    <div class="container responsive">
+    <div class="container responsive table-responsive">
       <h2>Comenzi:</h2>
       <p>Detalii:</p>            
       <table class="table table-bordered">
         <thead>
-          <tr>
+          <tr class="bg-info">
             <th>ID</th>
             <th>Nume</th>
             <th>Adresa ridicare</th>
@@ -22,7 +22,7 @@
         </thead>
         <tbody>
            @foreach ($orders as $order)
-            <tr>
+            <tr class="btn-default">
                 <td>{{$order->id}}</td>
                 <td>{{$order->name}}</td>
                 <td>{{$order->pickUpLocation}}</td>
@@ -33,9 +33,9 @@
                 <td>
                     
                      @if($order->hasBeenCalled===1)
-                           <font color="green"><strong > DA</strong></font> 
+                           <font color="green"><strong > <center>DA!</center></strong></font>
                         @else
-                          <font color="red"><strong > NU!</strong></font> 
+                          <font color="red"><strong > <center>NU!</center> </strong></font>
                         @endif
 
                 </td>
