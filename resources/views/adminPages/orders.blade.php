@@ -50,7 +50,9 @@
            @endforeach
         </tbody>
       </table>
+       <center> {{ $orders->links() }}</center>
     </div>
+
 
     <script>
         function getConfirmation(url) {
