@@ -125,20 +125,12 @@ Route::put('/order/{id}', [
 ]);
 
 Route::post('/device', [
-    'uses' => 'DevicesController@updateOfAddToken',
+    'uses' => 'DevicesController@updateOrAddToken',
     'as' => 'system.manageToken',
 ]);
 
 Route::post('/token', function () {
-    
-    if (isset($_POST["id"])) {
-        $id=$_POST["id"];
-        $reservation = \App\Reservation::find($id);
-        $hasBeenCalled = $_POST["hasBeenCalled"];
-        $reservation->hasBeenCalled = $hasBeenCalled;
-        $reservation->save();
         return response(200);
-    }
 });
 
 
