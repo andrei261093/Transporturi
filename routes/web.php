@@ -124,14 +124,8 @@ Route::put('/order/{id}', [
     'middleware' => 'auth'
 ]);
 
-Route::post('/device', [
-    'uses' => 'DevicesController@updateOrAddToken',
-    'as' => 'system.manageToken',
-]);
+Route::post('/token', 'DevicesController@updateOfAddToken');
 
-Route::post('/token', function () {
-        return response(200);
-});
 
 
 
