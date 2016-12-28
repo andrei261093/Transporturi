@@ -13,6 +13,8 @@ class DevicesController extends Controller
     {
         $output = new ConsoleOutput();
 
+        $output->writeln($request->username . " " . $request->fcm_token);
+
         $device = Devices::where('username', $request->username)->first();
 
         if($device === null){
